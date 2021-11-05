@@ -1,0 +1,7 @@
+export { default as navigationItems } from './navigationItems'
+export { default as social } from './social'
+export { default as servicesList } from './servicesList'
+export { default as servicesContent } from './servicesContent'
+export { default as languagesList } from './languagesList'
+export { default as translate } from './translate'
+export { default as contacts } from './contacts'

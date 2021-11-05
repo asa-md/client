@@ -1,0 +1,149 @@
+@import '../utils/vars';
+
+.button {
+    padding: 0 30px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: $White;
+    text-decoration: none;
+    background-color: $Cardinal;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    border-radius: 99px;
+    min-width: max-content;
+    max-width: max-content;
+    transition: $Trans;
+    font-weight: 600;
+    .text {
+        margin: 0 15px;
+    }
+    svg path {
+        transition: $Trans;
+
+        fill: $White;
+    }
+    &.white {
+        background-color: $White;
+        box-shadow: $Shadow;
+        color: $Downriver;
+        border: $Border;
+        svg path {
+            fill: $Downriver;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $Downriver;
+            svg path {
+                fill: $White;
+            }
+        }
+        &:active {
+            background-color: darken($Downriver, 5%);
+        }
+    }
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    &:hover {
+        background-color: lighten($Cardinal, 5%);
+    }
+    &:active {
+        background-color: darken($Cardinal, 5%);
+    }
+}
+
+.play {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: $Trans;
+    @include media-breakpoint-down(xl) {
+        margin-left: 50px;
+    }
+    @include media-breakpoint-down(lg) {
+        margin-left: 0;
+    }
+    &__container {
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 300px;
+        }
+    }
+    &__circle {
+        background: rgba(0, 0, 0, 0.1);
+        animation: shadow 3s ease infinite;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+        transition: $Trans;
+    }
+    &__icon {
+        max-width: 18px;
+        min-width: 18px;
+        max-height: 26px;
+        min-height: 26px;
+    }
+    &__text {
+        margin-left: 10px;
+        color: $White;
+        font-weight: 300;
+        font-size: 16px;
+        min-width: max-content;
+        max-width: max-content;
+    }
+
+    &:hover {
+        .play__circle {
+            background: $Cardinal;
+        }
+    }
+}
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+}
+
+.finished-circle {
+    background: $JellyBean;
+    animation: shadow-finished 3s ease infinite;
+    box-shadow: 0 0 0 3px rgba($JellyBean, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    transition: $Trans;
+}
+
+@keyframes shadow-finished {
+    0% {
+        box-shadow: 0 0 0 0 rgba($JellyBean, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 15px rgba($JellyBean, 0);
+    }
+}

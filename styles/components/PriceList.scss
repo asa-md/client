@@ -1,0 +1,146 @@
+@import '../utils/vars';
+
+.level {
+    border: $Border;
+    box-sizing: border-box;
+    border-radius: 99px;
+    padding: 10px 20px;
+    width: 100%;
+    min-width: max-content;
+    max-width: max-content;
+    &__info {
+        font-size: 16px;
+        line-height: 180%;
+        color: $Downriver;
+        &--accent {
+            font-weight: 600;
+            color: $Cardinal;
+            padding-right: 10px;
+        }
+    }
+    &__placeholder {
+        color: $Gray;
+        font-size: 16px;
+        margin-right: 5px;
+    }
+    &__button {
+        transition: $Trans;
+        border-radius: 99px;
+        background-color: $White;
+        border: none;
+        padding: 0 20px;
+        height: 40px;
+        margin: 0 5px;
+        font-weight: 600;
+        font-size: 16px;
+        color: $Downriver;
+        cursor: pointer;
+        box-shadow: $Shadow;
+        &--active {
+            background-color: $Cardinal;
+            color: $White;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        display: flex;
+        align-items: center;
+        min-width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: none;
+        padding: 0;
+        &__placeholder {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &__button {
+            margin: 0;
+            width: 47%;
+        }
+    }
+}
+
+.input-search {
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 10px center;
+    max-width: 360px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 16px;
+    padding-left: 50px;
+    padding-right: 20px;
+    border: none;
+    border-bottom: $Border;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath fill='%238A8A8A' d='M19.86 18.81l-5.04-5.04a.46.46 0 00-.33-.13h-.4a8.12 8.12 0 10-.45.46v.4c0 .12.05.23.13.32l5.04 5.04c.19.19.48.19.67 0l.38-.38a.47.47 0 000-.67zM8.13 15a6.87 6.87 0 11-.01-13.74 6.87 6.87 0 010 13.74z'/%3E%3C/svg%3E");
+    color: $Downriver;
+    transition: $Trans;
+    &::placeholder {
+        color: $Gray;
+    }
+    &:focus {
+        border-bottom: 1px solid $Downriver;
+        outline: none;
+    }
+
+    @include media-breakpoint-down(lg) {
+        margin-left: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-left: 0;
+        max-width: 100%;
+        margin-top: $gutter;
+        height: 50px;
+    }
+}
+
+.language {
+    [class*='col-'] {
+        margin-bottom: $gutter;
+    }
+    &__not-found {
+        font-size: 24px;
+        font-weight: 300;
+        color: $Gray;
+        text-align: center;
+        margin: 30px 0;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: $White;
+        box-shadow: $Shadow;
+        border-radius: $Radius;
+        padding-top: 20px;
+        border: $Border;
+        height: 100%;
+    }
+    &__img {
+        min-width: 30px;
+        max-width: 30px;
+        max-height: 20px;
+        min-height: 20px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    &__title {
+        color: $Gray;
+        font-size: 16px;
+        margin: 10px 0;
+        text-align: center;
+    }
+    &__price {
+        font-weight: bold;
+        font-size: 14px;
+        color: $Cardinal;
+        border-top: $Border;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+}

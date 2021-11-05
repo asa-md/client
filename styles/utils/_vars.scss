@@ -1,0 +1,33 @@
+@import 'bootstrap/scss/bootstrap-utilities.scss';
+
+$gutter: $grid-gutter-width;
+
+$White: #ffffff;
+$Black: #000000;
+$Downriver: #103464;
+$Atoll: #0b626b;
+$JellyBean: #287191;
+$Cardinal: #b91f2e;
+$Green: #00ff1d;
+$GreenOpacity: rgba($Green, 0.2);
+$Alto: #e0e0e0;
+$Gray: #8a8a8a;
+$Zircon: #fcfdff;
+$gradient: linear-gradient(107.49deg, $Downriver 0.66%, $JellyBean 100%);
+$gradient-inverse: linear-gradient(
+    107.49deg,
+    $JellyBean 0.66%,
+    $Downriver 100%
+);
+$gradient-transparent: linear-gradient(
+    107.49deg,
+    rgba($Downriver, 0.85) 0.66%,
+    rgba($JellyBean, 0.85) 100%
+);
+
+$Border: 1px solid rgba($Alto, 0.3);
+$Radius: 10px;
+$Shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+
+$Trans: all 0.3s ease-in-out;
+$nav-height: 70px;

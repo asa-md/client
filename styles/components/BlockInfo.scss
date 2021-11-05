@@ -1,0 +1,43 @@
+@import '../utils/vars';
+
+.info {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        min-width: 18px;
+        min-height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        margin-right: 20px;
+        path {
+            fill: $Gray;
+        }
+    }
+    &__message {
+        font-size: 14px;
+        color: $Gray;
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
+.section--dark,
+.section--dark-inverse {
+    .info {
+        padding: 20px;
+        background-color: rgba($Black, 0.07);
+        border-radius: $Radius;
+        @include media-breakpoint-down(sm) {
+            padding: $gutter / 2;
+        }
+        &__icon {
+            path {
+                fill: $Alto;
+            }
+        }
+        &__message {
+            color: $Alto;
+        }
+    }
+}

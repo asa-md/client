@@ -1,0 +1,49 @@
+@import "../utils/vars";
+
+.performance {
+  z-index: 1;
+  position: relative;
+
+  &-wrapper {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url('/img/performance.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 85%;
+
+  }
+
+  [class*="col"] {
+    margin-bottom: $gutter;
+  }
+
+  &__item {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: $Radius;
+    height: 100%;
+    @include media-breakpoint-down(xl) {
+      min-width: 250px;
+    }
+    @include media-breakpoint-down(lg) {
+      min-width: 200px;
+    }
+    &-number {
+      font-weight: bold;
+      font-size: 28px;
+      color: $White;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    &-text {
+      text-align: center;
+      font-size: 16px;
+      color: $Alto;
+    }
+  }
+}
