@@ -164,12 +164,12 @@ export default function Home(props) {
             <Head>
                 <script
                     async
-                    src={`https://www.googletagmanager.com/gtag/js?id=UA-192955089-1`}
+                    src={`https://www.googletagmanager.com/gtag/js?id=UA-201087216-1`}
                 />
 
                 <script
                     dangerouslySetInnerHTML={{
-                        __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'UA-192955089-1')
+                        __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'UA-201087216-1')
                         `,
                     }}
                 />
