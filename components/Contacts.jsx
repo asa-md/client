@@ -9,15 +9,15 @@ import { navigationItems, contacts, translate } from '../utils'
 import { useRouter } from 'next/router'
 
 export default function Contacts() {
-    const [position, setPosition] = useState(contacts.chisinau.position)
-    const [active, setActive] = useState(contacts.chisinau)
+    const [position, setPosition] = useState(contacts[0].location[0].position)
+    const [active, setActive] = useState(contacts[0].location[0])
 
     const router = useRouter()
     const { locale } = router
 
-    const clickHandler = (key, pos) => {
-        setActive(contacts[key])
-        setPosition(pos)
+    const clickHandler = (index, indexLocation, mapPosition) => {
+        setActive(contacts[index].location[indexLocation])
+        setPosition(mapPosition)
     }
 
     return (
@@ -42,23 +42,40 @@ export default function Contacts() {
                 </Container>
                 <Container>
                     <div className="col-xxl-4 col-lg-5 col-md-6">
-                        <div className="contacts__buttons">
-                            {Object.entries(contacts).map(([key, value]) => (
-                                <button
-                                    className={
-                                        value.position === position
-                                            ? 'contacts__button contacts__button--active'
-                                            : 'contacts__button'
-                                    }
-                                    key={value.text_ro}
-                                    onClick={() =>
-                                        clickHandler(key, value.position)
-                                    }
-                                >
-                                    {value['text_' + locale]}
-                                </button>
-                            ))}
-                        </div>
+                        {contacts.map((item, index) => (
+                            <div
+                                key={index}
+                                className="contacts__buttonsWrapper"
+                            >
+                                <div className="contacts__buttonsTitle">
+                                    {item['category_' + locale]}
+                                </div>
+                                <div key={index} className="contacts__buttons">
+                                    {item.location.map(
+                                        (itemLocation, indexLocation) => (
+                                            <button
+                                                key={itemLocation.text_ro}
+                                                className={
+                                                    itemLocation.position ===
+                                                    position
+                                                        ? 'contacts__button contacts__button--active'
+                                                        : 'contacts__button'
+                                                }
+                                                onClick={() =>
+                                                    clickHandler(
+                                                        index,
+                                                        indexLocation,
+                                                        itemLocation.position
+                                                    )
+                                                }
+                                            >
+                                                {itemLocation['text_' + locale]}
+                                            </button>
+                                        )
+                                    )}
+                                </div>
+                            </div>
+                        ))}
 
                         <div className="contacts__item">
                             <div className="contacts__label">

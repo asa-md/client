@@ -260,6 +260,14 @@ const translate = {
         ru:
             'Компания предлагает услуги профессионального перевода более чем на 22 языка мира с абсолютно бесплатными консультациями.',
     },
+    chisinau_centru: {
+        ro: 'Centru',
+        ru: 'Центр',
+    },
+    chisinau_botanica: {
+        ro: 'Botanica',
+        ru: 'Ботаника',
+    },
 }
 
 export default translate

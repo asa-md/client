@@ -179,11 +179,6 @@ export default function Home(props) {
                         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WWGJ4X6')`,
                     }}
                 />
-                <noscript
-                    dangerouslySetInnerHTML={{
-                        __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWGJ4X6"height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-                    }}
-                />
             </Head>
 
             {/*<CallBack />*/}
@@ -331,38 +326,14 @@ export default function Home(props) {
             <Faq />
 
             <Footer />
-
-            <div className="dev">
-                <span>Designed & Developed with</span>
-                <svg
-                    className="dev__svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    height={20}
-                    width={20}
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                </svg>
-                <span>
-                    by{' '}
-                    <a href="https://ul.md/igorfrecautan">
-                        <strong>Igor Frecautan</strong>
-                    </a>
-                </span>
-            </div>
         </>
     )
 }
 
 export async function getServerSideProps() {
-    const languagesList = await fetch(`https://success.asa.md/api/languages`).then(
+    const languagesList = await fetch(
+        `https://success.asa.md/api/languages`
+    ).then(
         // const languagesList = await fetch(`${process.env.API}/languages`).then(
         (response) => {
             return response.json()

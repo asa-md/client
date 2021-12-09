@@ -6,8 +6,10 @@ const navigationItems = {
     },
     languagesAndPrices: {
         link: 'languages-and-prices',
-        text_ro: 'Limbi și prețuri',
-        text_ru: 'Языки и цены',
+        text_ro: 'Limbi',
+        // text_ro: 'Limbi și prețuri',
+        text_ru: 'Языки',
+        // text_ru: 'Языки и цены',
     },
     // calc: {
     //     link: 'calc',

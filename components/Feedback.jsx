@@ -22,7 +22,7 @@ const feedbacks_ro = [
         func: 'Antreprenor',
         comment:
             'Recomand cu încredere.... Echipa își face treaba profesionist. Traduceri legalizate livrate la timp... Mulțumesc 🙂',
-        facebook: 'https://www.facebook.com/fiodor.gutu.58',
+        facebook: 'https://www.facebook.com/budaianusergiu',
         instagram: 'https://www.instagram.com/sergiubudaianu/',
     },
     {
@@ -85,7 +85,7 @@ export default function Feedback() {
 
     const params = {
         slidesPerView: 1,
-        autoHeight: true,
+        // autoHeight: true,
         autoplay: {
             delay: 3000,
         },

@@ -355,26 +355,55 @@ h2.title {
 }
 
 .contacts {
+
+    &__buttonsWrapper {
+        margin-bottom: 10px;
+    }
     &__buttons {
         display: flex;
         align-items: center;
-        .contacts__button:nth-child(1) {
-            margin-right: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__buttonsTitle {
+        color: $Downriver;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 100%;
+            background: $Alto;
+            margin-left: 10px;
+            background: linear-gradient(to right, transparent 50%, $Alto 50%);
+            background-size: 16px 2px, 100% 2px;
+            order: 3;
         }
+        //&::before {
+        //    content: ":";
+        //    order: 2;
+        //
+        //}
     }
     &__button {
         border-radius: 99px;
         background-color: $White;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 18px;
         padding: 0 20px;
         height: 50px;
         box-shadow: $Shadow;
         border: $Border;
         cursor: pointer;
         transition: $Trans;
-        width: 100%;
+        width: calc(100% / 2 - 10px);
         color: $Downriver;
+        margin-bottom: 20px;
         &--active {
             background-color: $Cardinal;
             color: $White;
@@ -1165,29 +1194,6 @@ body.ReactModal__Body--open {
         transition: $Trans;
         &:hover {
             background: rgba(0, 0, 0, 0.05);
-        }
-    }
-}
-
-.dev {
-    text-align: center;
-    padding: $gutter / 2 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &__svg {
-        display: inline-block;
-        margin: 0 3px;
-    }
-    strong {
-        display: inline-block;
-        margin-left: 3px;
-    }
-    a {
-        transition: $Trans;
-        text-decoration: underline;
-        &:hover {
-            color: $Cardinal;
         }
     }
 }

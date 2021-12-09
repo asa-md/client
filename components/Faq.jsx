@@ -79,7 +79,7 @@ export default function NavigationMenu() {
                 <div className="col-12">
                     <Accordion allowZeroExpanded>
                         {items.map((item) => (
-                            <AccordionItem>
+                            <AccordionItem key={item.title_ro}>
                                 <AccordionItemHeading>
                                     <AccordionItemButton>
                                         <span className="accordion__button-icon"></span>

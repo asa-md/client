@@ -2,10 +2,10 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 
-import { navigationItems } from '../utils'
+import { navigationItems, translate } from '../utils'
 import { useRouter } from 'next/router'
 
-export default function NavigationMenu({ translate }) {
+export default function NavigationMenu() {
     const [hamburger, setHamburger] = useState(false)
     const router = useRouter()
     const { locale } = router
@@ -19,16 +19,57 @@ export default function NavigationMenu({ translate }) {
                 duration={1500}
                 href={'#home'}
                 offset={-100}
-                style={{ zIndex: 2 }}
+                style={{ zIndex: 2, flex: '0 0 auto' }}
                 onClick={() => setHamburger(false)}
             >
-                <Image src="/img/logo.svg" width="100" height="35" />
+                <Image src="/img/logo.svg" width="70" height="25" />
             </Link>
             <ul
                 className={
                     hamburger ? 'navigation__menu open' : 'navigation__menu'
                 }
             >
+                <li
+                    className="navigation__item d-sm-none d-block"
+                    style={{ width: '85%' }}
+                >
+                    <div className="navigation__phone-wrapper">
+                        <div style={{ marginBottom: 10 }}>
+                            <Image
+                                src="/img/icons/icons-blue/phone.svg"
+                                width={40}
+                                height={40}
+                            />
+                        </div>
+                        <div className="navigation__phone">
+                            <a href="tel:+37368853504">
+                                <div
+                                    style={{
+                                        fontSize: 16,
+                                        fontWeight: 100,
+                                        opacity: 0.7,
+                                    }}
+                                >
+                                    {translate.chisinau_centru[locale]}:
+                                </div>
+                                <div>068 853 504</div>
+                            </a>
+                            <span className="navigation__phone-span">/</span>
+                            <a href="tel:+37378150555">
+                                <div
+                                    style={{
+                                        fontSize: 16,
+                                        fontWeight: 100,
+                                        opacity: 0.7,
+                                    }}
+                                >
+                                    {translate.chisinau_botanica[locale]}:
+                                </div>
+                                <div>078 150 555</div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
                 {Object.entries(navigationItems).map(([key, value]) => (
                     <li key={value.link} className="navigation__item">
                         <Link
@@ -46,7 +87,7 @@ export default function NavigationMenu({ translate }) {
                         </Link>
                     </li>
                 ))}
-                <li className="navigation__item">
+                <li className="navigation__item d-xl-none d-flex">
                     {locale === 'ru' && (
                         <button
                             className="navigation__lang d-xl-none d-flex"
@@ -84,6 +125,41 @@ export default function NavigationMenu({ translate }) {
                     )}
                 </li>
             </ul>
+
+            <div className="navigation__phone-wrapper d-sm-flex d-none">
+                <Image
+                    src="/img/icons/icons-blue/phone.svg"
+                    width={20}
+                    height={20}
+                />
+                <div className="navigation__phone">
+                    <a href="tel:+37368853504">
+                        <div
+                            style={{
+                                fontSize: 13,
+                                fontWeight: 100,
+                                opacity: 0.7,
+                            }}
+                        >
+                            {translate.chisinau_centru[locale]}
+                        </div>
+                        <div>068 853 504</div>
+                    </a>
+                    <span className="navigation__phone-span">/</span>
+                    <a href="tel:+37378150555">
+                        <div
+                            style={{
+                                fontSize: 13,
+                                fontWeight: 100,
+                                opacity: 0.7,
+                            }}
+                        >
+                            {translate.chisinau_botanica[locale]}
+                        </div>
+                        <div>078 150 555</div>
+                    </a>
+                </div>
+            </div>
 
             {locale === 'ru' && (
                 <button
