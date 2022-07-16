@@ -231,23 +231,23 @@ export default function OrderModal({ languagesList }) {
 
 
             <div style={{ display: locale === 'ru' ? 'block' : 'none' }}>
-                <script
+                {/* <script
                     data-b24-form="click/12/m9k2j4"
                     data-skip-moving="true"
                     dangerouslySetInnerHTML={{
                         __html: `(function(w,d,u){ var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0); var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h); })(window,document,'https://cdn-ru.bitrix24.ru/b18465378/crm/form/loader_12.js');`,
                     }}
-                />
+                /> */}
                 <Button text={translate.btn[locale]} />
             </div>
             <div style={{ display: locale === 'ro' ? 'block' : 'none' }}>
-                <script
+                {/* <script
                     data-b24-form="click/10/yfq96d"
                     data-skip-moving="true"
                     dangerouslySetInnerHTML={{
                         __html: `(function(w,d,u){ var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0); var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h); })(window,document,'https://cdn-ru.bitrix24.ru/b18465378/crm/form/loader_10.js');`,
                     }}
-                />
+                /> */}
                 <Button text={translate.btn[locale]} />
             </div>
 
