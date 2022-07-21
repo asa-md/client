@@ -181,7 +181,45 @@ export default function Home(props) {
                 />
             </Head>
 
-            {/*<CallBack />*/}
+          <Head>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `(function(a,m,o,c,r,m){a[m]={id:"222001",hash:"431f3d1ac8c0fcb23f42d4965949fb080b490affc731e29498e43fa325b5adf2",locale:"ru",inline:true,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1656488666';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));`,
+              }}
+            />
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"958150",hash:"ded3f914db44f79016e505cbb00f4188",locale:"en"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");`,
+              }}
+            />
+            <script id="amoforms_script_958150" async charSet="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1657883861"/>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"958147",hash:"c81aeeefdc5891b9028c8f258668d098",locale:"en"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");`,
+              }}
+            />
+            <script id="amoforms_script_958147" async charSet="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1657883831"/>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"965731",hash:"abee4b7f9538c9dc8dfb9c0ac17d6dc8",locale:"en"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");`,
+              }}
+            />
+            <script id="amoforms_script_965731" async charSet="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1657875946"/>
+
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"958147",hash:"c81aeeefdc5891b9028c8f258668d098",locale:"en"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");`,
+              }}
+            />
+            <script id="amoforms_script_958147" async="async" charSet="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1658173919"/>
+
+
+          </Head>
+
+            {/*<CallBack123 />*/}
             <FirstBlock
                 translate={props.translate}
                 languagesList={props.languagesList}
